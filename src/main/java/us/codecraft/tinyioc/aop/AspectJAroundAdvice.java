@@ -1,6 +1,5 @@
 package us.codecraft.tinyioc.aop;
 
-import org.aopalliance.aop.Advice;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 import us.codecraft.tinyioc.beans.factory.BeanFactory;
@@ -15,7 +14,7 @@ import java.lang.reflect.Method;
  * @author tengyu
  *
  */
-public class AspectJAroundAdvice implements Advice, MethodInterceptor {
+public class AspectJAroundAdvice implements MethodInterceptor {
 
 	private BeanFactory beanFactory;
 
