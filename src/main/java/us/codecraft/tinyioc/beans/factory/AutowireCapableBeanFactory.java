@@ -9,7 +9,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 /**
- * 可自动装配内容的BeanFactory
+ * 可自动装配(AutowireCapable)内容的BeanFactory
  * 
  * @author yihua.huang@dianping.com
  */
