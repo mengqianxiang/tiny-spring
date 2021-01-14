@@ -35,6 +35,7 @@ public class AutowireCapableBeanFactory extends AbstractBeanFactory {
 
 			//引用的关联，这里先找有没有setXX()，即设置其他类引用的方法，如果有就调用这个方法，
 			//如果没有就看有没有其他类引用的字段，如果有就直接引用把设置到对应的字段
+			//这里没有的原因是如果set的是接口，则得到的实例是实现，类名不一样，导致获取不到对应的set方法，要使用设置Field的方式，设置值。
 			try {
 				Method declaredMethod = bean.getClass().getDeclaredMethod(
 						"set" + propertyValue.getName().substring(0, 1).toUpperCase()
